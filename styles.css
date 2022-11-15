@@ -30,7 +30,7 @@ body::before {
       rgba(189, 25, 25, 0.2),
       rgba(79, 79, 156, 0.6)
     ),
-    url(backside.jpg);
+    url(https://aliakseimazheika.github.io/Survey-form/backside.jpg);
   background-size: cover;
   background-position: center;
 z-index: -1;
