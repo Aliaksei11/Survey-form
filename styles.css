@@ -1,191 +1,191 @@
 :root {
-  --color-1: #eee;
-  --color-2: #25259e;
-  --color-3: rgba(59, 73, 108, 0.8);
-  --color-4: gold;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--color-1);
+--color-1: #eee;
+--color-2: #25259e;
+--color-3: rgba(59, 73, 108, 0.8);
+--color-4: gold;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-1);
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  display: inline;
+  position: fixed;
+  background: var(--color-2);
+  background-image: linear-gradient(
+      60deg,
+      rgba(189, 25, 25, 0.2),
+      rgba(79, 79, 156, 0.6)
+    ),
+    url(https://aliakseimazheika.github.io/Survey-form/backside.jpg);
+  background-size: cover;
+  background-position: center;
+z-index: -1;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+body::after{
+    background: #1a32;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+h1 {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  margin-top: -0.2rem;
+}
+
+input, button, select, textarea {
     margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    /*width: 100%;*/
+}
+
+#number, #email, #name, #dropdown, #most-like {
+  width: 100%;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  margin: 0 auto 0 auto;
+  padding-top: 100px;
+}
+
+.header {
+  padding: 0 0.5rem;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.8)
+}
+
+.clue {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  color: rgb(219, 221, 140);
+}
+
+.text-center {
+  text-align: center;
+  font-size: 1.2em;
+
+}
+
+form {
+  background: var(--color-3);
+  padding: 2.5rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.form-group {
+  margin: 1.5em auto 0 auto;
+  width: 100%;
+}
+
+form-control {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem, 0.75rem;
+  color: #368574;
+  background-color: #fff;
   }
-  
-  body::before {
-    content: "";
-    display: inline;
-    position: fixed;
-    background: var(--color-2);
-    background-image: linear-gradient(
-        115deg,
-        rgba(189, 25, 25, 0.8),
-        rgba(79, 79, 156, 0.7)
-      ),
-      url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-    background-size: cover;
-    background-position: center;
-  z-index: -1;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+
+  .form-control:focus {
+    border-color: #90cdaa;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 120, 200, 0.2);
+    border-size: 1rem;
   }
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 0.5rem;
+  min-width: 1.25rem;
   
-  body::after{
-      background: #1a32;
-  }
-  
-  h1 {
-    font-weight: 400;
-    line-height: 1.2;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  h1 {
-    margin-top: 0rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  label {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 0rem;
-    margin-top: -0.2rem;
-  }
-  
-  input, button, select, textarea {
-      margin: 0;
-      font-family: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      /*width: 100%;*/
-  }
-  
-  #number, #email, #name, #dropdown, #most-like {
-    width: 100%;
-  }
-  
-  button {
-    border: none;
-  }
-  
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.7rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-4);
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.text {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
   .container {
-    margin: 0 auto 0 auto;
-    padding-top: 100px;
+    max-width: 540px;
   }
-  
-  .header {
-    padding: 0 0.5rem;
-    font-size: 1.2em;
-    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
   }
-  
-  .description {
-    font-style: italic;
-    font-weight: 300;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.8)
-  }
-  
-  .clue {
-    margin-left: 0.3rem;
-    font-size: 0.8rem;
-    color: rgb(219, 221, 140);
-  }
-  
-  .text-center {
-    text-align: center;
-    font-size: 1.2em;
-  
-  }
-  
+}
+
+@media (min-width: 480px) {
   form {
-    background: var(--color-3);
-    padding: 2.5rem 1rem;
-    border-radius: 0.2rem;
+    max-width: 720;
+    padding: 3rem;
   }
-  
-  .form-group {
-    margin: 1.5em auto 0 auto;
-    width: 100%;
-  }
-  
-  form-control {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem, 0.75rem;
-    color: #368574;
-    background-color: #fff;
-    }
-  
-    .form-control:focus {
-      border-color: #90cdaa;
-      outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(0, 120, 200, 0.2);
-      border-inline: 1rem;
-    }
-  
-  .input-radio,
-  .input-checkbox {
-    display: inline-block;
-    margin-right: 0.2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    min-height: 0.5rem;
-    min-width: 1.25rem;
-    
-  }
-  
-  .input-textarea {
-    min-height: 120px;
-    width: 100%;
-    padding: 0.7rem;
-    resize: vertical;
-  }
-  
-  .submit-button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    background: var(--color-4);
-    color: black;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .text {
-    text-align: center;
-  }
-  
-  @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-  
-  @media (min-width: 480px) {
-    form {
-      max-width: 720;
-      padding: 3rem;
-    }
-  }
+}
